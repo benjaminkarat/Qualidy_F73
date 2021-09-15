@@ -10,6 +10,7 @@
 
 public class Gauss_Jordan {
 	    public static void main(String[] args) {
+		// Ax = b
 		double[][] mat = { { 2, 2, 3, 2 }, 
                            { 0, 2, 0, 1 },
 						   { 4, -3, 0, 1 },
@@ -20,6 +21,7 @@ public class Gauss_Jordan {
 	}
 
 	private static double[] solve(double[][] mat, double[] vector) throws IllegalArgumentException {
+
 		if (mat.length < mat[0].length) throw new IllegalArgumentException("Wrong matrix dimensions"); // Mehr Variablen als Gleichungen
 		System.out.println("Startmatrix: ");
 		printMatrix(mat, vector);
@@ -56,7 +58,7 @@ public class Gauss_Jordan {
 					if (mat[row][tmpColumn] != 0) {
 						swapTwoLines(line, row, mat, vector);
 						System.out.println("Zeilentausch:");
-						printMatrix(mat, vector);;
+						printMatrix(mat, vector);
 						break;
 					}
 				}
@@ -67,7 +69,7 @@ public class Gauss_Jordan {
 				divideLine(line, mat[line][tmpColumn], mat, vector); // Zeile normalisieren
 			}
 			System.out.println("Normalisieren von Zeile " + (line+1) + ":");
-			printMatrix(mat, vector);;
+			printMatrix(mat, vector);
 
 			// Schritt 4: Alle Zahlen unter der neuen 1 sollen 0 sein
 			for (int row = line + 1; row < mat.length; row++) {
@@ -75,21 +77,21 @@ public class Gauss_Jordan {
 				removeRowLeadingNumber(mat[row][tmpColumn], line, row, mat, vector);
 			}
 			System.out.println("Nullen unter Zeile " + (line + 1) + " erzeugen: ");
-			printMatrix(mat, vector);;
+			printMatrix(mat, vector);
 		}
 		System.out.println("Treppenform:");
-		printMatrix(mat, vector);;
+		printMatrix(mat, vector);
 
 		// Schritt 6: Normalform - Alle Zahlen oberhalb der 1 sollen ebenfalls 0 sein
 		for (int col = mat[0].length - 1; col > 0; col--) {
-			for (int row = col; row > 0; row--) {
-				// Zeile mit der 1er Zeile zu 0 verrechnen
+			for (int row = col; row > 0; row--) {			
+				// Zeile mit der 1er Zeile zu 0 verrechnen  
 				removeRowLeadingNumber(mat[row - 1][col], col, row - 1, mat, vector);
 			}
 		}
 		System.out.println("Normalform:");
-		printMatrix(mat, vector);;
-
+		printMatrix(mat, vector);
+		
 		return vector; // Ergebnis ausgeben
 	}
 
