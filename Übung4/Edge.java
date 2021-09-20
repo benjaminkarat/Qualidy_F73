@@ -8,7 +8,7 @@ public class Edge {
 
     @Override
     public int hashCode() {
-        return this.a.hashCode() * this.b.hashCode();
+        return this.a.hashCode() + this.b.hashCode();
     }
 
     @Override

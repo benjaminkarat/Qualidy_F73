@@ -20,6 +20,9 @@ public class Gauss_Jordan {
 		double[] result = solve(mat, vector);
 	}
 
+	// 1. Inverse erstellen
+	// 2. Matrizen multiplizieren (Auch Matrizen x Vektor)
+
 	private static double[] solve(double[][] mat, double[] vector) throws IllegalArgumentException {
 
 		if (mat.length < mat[0].length) throw new IllegalArgumentException("Wrong matrix dimensions"); // Mehr Variablen als Gleichungen

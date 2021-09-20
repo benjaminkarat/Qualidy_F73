@@ -1,7 +1,7 @@
 public class Matrix {
 
      // Multipliziert Matrix mit Vektor und gibt das Ergebnis zurück
-     public static double[] multiply(double[][] a, double[] x) {
+    public static double[] multiply(double[][] a, double[] x) {
         if (x.length != a[0].length) throw new RuntimeException("Illegal matrix dimensions.");
         double[] y = new double[a.length];
         for (int i = 0; i < a.length; i++)
@@ -101,7 +101,7 @@ public class Matrix {
         return vector; // Ergebnis ausgeben
     }
 
-    // Gibt Identitätsmatrix mit size x size Reihen und Spalten zurück
+    // Gibt Einheitsmatrix mit size x size Reihen und Spalten zurück
     public static double[][] generateIdentity(int size) {
         double[][] identity = new double[size][size];
         for (int row = 0; row < identity.length; row++) {
@@ -121,8 +121,7 @@ public class Matrix {
 
         System.out.println("Ausgangsmatrix: ");
         printMatrix(mat);
-        System.out.println("Identitätsmatrix: ");
-        printMatrix(inverse);
+
         // Treppenform erzeugen
         for (int line = 0; line < mat.length; line++) {
             tmpColumn = -1;
