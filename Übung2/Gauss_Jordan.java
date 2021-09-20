@@ -14,7 +14,7 @@ public class Gauss_Jordan {
 		double[][] mat = { { 2, 2, 3, 2 }, 
                            { 0, 2, 0, 1 },
 						   { 4, -3, 0, 1 },
-						   { 6, 1, -6, -5 },};
+						   { 6, 1, -6, -5 }};
 
 		double[] vector = {-2, 0, -7, 6};
 		double[] result = solve(mat, vector);
@@ -45,7 +45,7 @@ public class Gauss_Jordan {
 			}
 
 			// Nullzeile bei Linie 'line' entdeckt!
-			if (tmpColumn == -1) {
+			if (tmpColumn == -1) { 
 				for (int row = line; row < mat.length; row++) {
 					if (vector[line] != 0) throw new ArithmeticException("LGS unlösbar"); // Widerspruch?
 				}
