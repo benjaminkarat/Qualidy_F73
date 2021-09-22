@@ -18,7 +18,7 @@ public class Matrix {
             for (int col = 0; col < B[row].length; col++) {
                 result[row][col] = 0; // Initialisieren
 
-                // Multipliziren
+                // Multiplizieren
 				for(int i = 0; i < B.length; i++ ) {
 					result[row][col] += A[row][i] * B[i][col];
 				}
@@ -187,7 +187,7 @@ public class Matrix {
             }
         }
 
-        // Schritt 6: Normalform - Alle Zahlen oberhalb der 1 sollen ebenfalls 0 sein
+        // Schritt 5: Normalform - Alle Zahlen oberhalb der 1 sollen ebenfalls 0 sein
         for (int col = mat[0].length - 1; col > 0; col--) {
             for (int row = col; row > 0; row--) {			
                 // Zeile mit der 1er Zeile zu 0 verrechnen  

@@ -11,7 +11,7 @@
 public class Gauss_Jordan {
 	    public static void main(String[] args) {
 		// Ax = b
-		double[][] mat = { { 2, 2, 3, 2 }, 
+		double[][] mat = { { 1, 2, 3, 2 }, 
                            { 0, 2, 0, 1 },
 						   { 4, -3, 0, 1 },
 						   { 6, 1, -6, -5 }};
@@ -85,7 +85,7 @@ public class Gauss_Jordan {
 		System.out.println("Treppenform:");
 		printMatrix(mat, vector);
 
-		// Schritt 6: Normalform - Alle Zahlen oberhalb der 1 sollen ebenfalls 0 sein
+		// Schritt 5: Normalform - Alle Zahlen oberhalb der 1 sollen ebenfalls 0 sein
 		for (int col = mat[0].length - 1; col > 0; col--) {
 			for (int row = col; row > 0; row--) {			
 				// Zeile mit der 1er Zeile zu 0 verrechnen  
