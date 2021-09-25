@@ -202,7 +202,7 @@ public class Matrix {
     }
 
     // Zwei Zeilen tauschen
-    private static void swapTwoLines(int rowOne, int rowTwo, double[][] mat, double[] vector) {
+    public static void swapTwoLines(int rowOne, int rowTwo, double[][] mat, double[] vector) {
         double[] tmpLine;
         double tmpVar;
 

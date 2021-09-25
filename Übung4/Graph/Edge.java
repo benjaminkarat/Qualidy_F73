@@ -1,3 +1,4 @@
+package Graph;
 public class Edge {
     private Node a,b;
 
