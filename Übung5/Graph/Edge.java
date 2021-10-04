@@ -18,10 +18,10 @@ public class Edge {
     }
 
     public Node getA() {
-        return a;
+        return this.a;
     }
 
     public Node getB() {
-        return b;
+        return this.b;
     }
 }
