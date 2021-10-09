@@ -33,6 +33,10 @@ public class Graph {
         this.edges = new HashSet<>();
     };
 
+    public void bfs(Node startingNode) {
+        // Implement Me!
+    }
+
     public boolean isConnected() {
         Node startingNode = (Node)this.nodes.toArray()[0];  // Da der Startknoten keine Rolle spielt, wird der erste Knoten der Liste gewählt
         // 1. Map mit Knoten -> true/false (besucht/nicht besucht) deklarieren und initialisieren
