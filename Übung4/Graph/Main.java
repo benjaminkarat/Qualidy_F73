@@ -12,7 +12,11 @@ public class Main {
         Graph g = new Graph(adj);
         */
         Graph g = new Graph();
-        g.addNode(new Node("3"));
-        
+        Node n1 = new Node("1");
+        Node n2 = new Node("2");
+
+        g.addNode(n1);
+        g.addNode(n2);
+        g.addEdge(n1, n2);
     }
 }

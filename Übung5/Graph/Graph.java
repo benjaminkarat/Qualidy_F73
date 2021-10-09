@@ -18,7 +18,7 @@ public class Graph {
         
         // Scan for 1 in adj and add corresponding edge
         for(int i = 0; i < adj.length; i++) {
-            for (int j = 0; j < adj[i].length; j++) {
+            for (int j = i; j < adj[i].length; j++) {
                 if (adj[i][j] == 1) {
                     Node a = new Node(Integer.toString(i));
                     Node b = new Node(Integer.toString(j));
@@ -34,7 +34,7 @@ public class Graph {
     };
 
     public boolean isConnected() {
-        Node startingNode = (Node) this.nodes.toArray()[0]; // Da der Startknoten keine Rolle spielt, wird der erste Knoten der Liste gewählt
+        Node startingNode = (Node)this.nodes.toArray()[0];  // Da der Startknoten keine Rolle spielt, wird der erste Knoten der Liste gewählt
         // 1. Map mit Knoten -> true/false (besucht/nicht besucht) deklarieren und initialisieren
         HashMap<Node, Boolean> visitedNodes = new HashMap<>();
         for (Node n : nodes) {
