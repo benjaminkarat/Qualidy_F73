@@ -6,8 +6,8 @@ public class Suchbaum<E> implements Comparable<E> {
     private Suchbaum<E> right;
 
     // Constructor leerer Baum
-    public Suchbaum() {
-
+    public Suchbaum(E value) {
+        this.value = value;
     }
 
     // Erstellen eines Baumes mit Werten aus einem Array
@@ -35,7 +35,7 @@ public class Suchbaum<E> implements Comparable<E> {
         return null;
     }
 
-    public boolean contains() {
+    public boolean contains(E val) {
         // Implement me!
         return false;
     }
