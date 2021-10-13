@@ -1,6 +1,6 @@
 import java.util.Collection;
 
-public class Suchbaum<E> implements Comparable<E> {
+public class Suchbaum<E extends Comparable> {
     private E value;
     private Suchbaum<E> left;
     private Suchbaum<E> right;
@@ -38,10 +38,5 @@ public class Suchbaum<E> implements Comparable<E> {
     public boolean contains(E val) {
         // Implement me!
         return false;
-    }
-
-    @Override
-    public int compareTo(E o) {
-        return ((Comparable<E>) this.value).compareTo(o);
     }
 }
