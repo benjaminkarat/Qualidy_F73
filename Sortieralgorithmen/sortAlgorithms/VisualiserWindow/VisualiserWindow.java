@@ -19,8 +19,8 @@ import java.util.Map;
 public class VisualiserWindow extends JPanel {
     JFrame window;
     JLabel liveCounter;
-    public final int width = 1920;
-    public final int height = 1080;
+    public final int width = 800;
+    public final int height = 600;
     public final boolean showLabels = false;
     public ArrayToSort array;
     /** Anzahl an Wartezeit(ms) nach einem update (Wird durch Slider gesteuert) */
