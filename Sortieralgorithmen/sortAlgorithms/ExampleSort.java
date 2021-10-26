@@ -12,8 +12,9 @@ public class ExampleSort extends ArrayToSort {
 
     @Override
     public void sort() {
-        swapValue(0, size() - 1);
-        setValue(2, 10);
+        //swapValue(0, size() - 1);
+        //setValue(2, 10);
+        //getValue(10);
         // ................
     }
 }
