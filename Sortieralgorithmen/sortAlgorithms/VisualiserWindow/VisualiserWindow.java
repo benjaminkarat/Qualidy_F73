@@ -52,12 +52,12 @@ public class VisualiserWindow extends JPanel {
             }
             
         });
-        //this.add(speedSlider); // AUSKOMMENTIEREN UM SLIDER FREIZUSCHALTEN
+        this.add(speedSlider);
 
         // Operation Textanzeige
         this.liveCounter = new JLabel("");
         this.liveCounter.setForeground(new Color(0,113, 188));
-        //this.add(liveCounter); // AUSKOMMENTIEREN UM OPERATIONENZÄHLER FREIZUSCHALTEN
+        this.add(liveCounter);
 
         // Asynchroner SwingWorker, führt Sortieren im Hintergrund aus
         SwingWorker<Void, Void> swingWorker = new SwingWorker<Void,Void>() {
